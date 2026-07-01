@@ -1,0 +1,262 @@
+{
+  "info": {
+    "_postman_id": "222e05be-ba10-4c18-94d4-6ca1e6bd3233",
+    "name": "prime backend api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53960444",
+    "_collection_link": "https://go.postman.co/collection/53960444-222e05be-ba10-4c18-94d4-6ca1e6bd3233?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "user_register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"sagar1\",\r\n    \"email\": \"sagar@example.com\",\r\n    \"password\": \"Sagar@123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/auth/register/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "register",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user_login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"sagar@example.com\",\r\n    \"password\": \"Sagar@123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/auth/login/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "add_products",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": " application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyOTA0NzUxLCJpYXQiOjE3ODI5MDQ0NTEsImp0aSI6ImFkOTFkYjY0YmJiMTQwMDg5MTRhM2Y0NjFhOWNkZGExIiwidXNlcl9pZCI6IjIifQ.SMz3s6o57fIY47FNPa3P0FB_-LOrL2uHxV7VPSVbX6c",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Laptop\",\r\n    \"description\":\"Dell Gaming Laptop\",\r\n    \"price\":\"55000.00\",\r\n    \"stock\":10\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/products/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "products",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get_product",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyOTIyOTA3LCJpYXQiOjE3ODI5MjI2MDcsImp0aSI6IjMxNWQwNjNhMjFkMjQzYTNiMTU3YWE1ZTFmZDJlMjNlIiwidXNlcl9pZCI6IjIiLCJlbWFpbCI6InNhZ2FyQGV4YW1wbGUuY29tIiwicm9sZSI6IlVTRVIifQ.WoswFT1qWvb00B15SSMunKxgNju3RD6E2zcgwXhyymk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/products/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "products",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get_sin_product",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyOTIyOTA3LCJpYXQiOjE3ODI5MjI2MDcsImp0aSI6IjMxNWQwNjNhMjFkMjQzYTNiMTU3YWE1ZTFmZDJlMjNlIiwidXNlcl9pZCI6IjIiLCJlbWFpbCI6InNhZ2FyQGV4YW1wbGUuY29tIiwicm9sZSI6IlVTRVIifQ.WoswFT1qWvb00B15SSMunKxgNju3RD6E2zcgwXhyymk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/products/1/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "products",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "put_product",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyOTIyOTA3LCJpYXQiOjE3ODI5MjI2MDcsImp0aSI6IjMxNWQwNjNhMjFkMjQzYTNiMTU3YWE1ZTFmZDJlMjNlIiwidXNlcl9pZCI6IjIiLCJlbWFpbCI6InNhZ2FyQGV4YW1wbGUuY29tIiwicm9sZSI6IlVTRVIifQ.WoswFT1qWvb00B15SSMunKxgNju3RD6E2zcgwXhyymk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Gaming Mouse\",\r\n    \"description\": \"RGB Mouse\",\r\n    \"price\": 1200,\r\n    \"stock\": 50\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/products/1/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "products",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete_product",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
